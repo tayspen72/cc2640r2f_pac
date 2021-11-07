@@ -1,0 +1,21 @@
+[package]
+version = "1.0.0"
+authors = [ "Taylor Spencer <tayspen72@gmail.com>" ]
+description = "Peripheral access API for CC2640R2F Microcontrollers"
+keywords = ["no-std", "arm", "cortex-m", "cc2640r2f", "cc2640r2f_pac"]
+license = "MIT OR Apache-2.0"
+name = "cc2640r2f_pac"
+repository = "https://github.com/tayspen72/cc2640r2f_pac"
+edition = "2018"
+
+[dependencies]
+bare-metal = "1.0.0"
+vcell = "0.1.3"
+cortex-m = "0.7.3"
+
+[dependencies.cortex-m-rt]
+optional = true
+version = "0.7.0"
+
+[features]
+rt = ["cortex-m-rt/device"]
